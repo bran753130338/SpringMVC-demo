@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>成功跳转页面</title>
 </head>
 <body>
-<h2>Hello</h2>
-<h3>跳转成功</h3>
+<h1>Hello</h1>
+<h1>跳转成功</h1>
 </body>
 </html>
