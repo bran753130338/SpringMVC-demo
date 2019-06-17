@@ -8,6 +8,7 @@
 <a href="hello" >入门程序</a><br/>
 <a href="${pageContext.request.contextPath}/test/testRequestMapping">测试RequestMapping</a><br/>
 <a href="${pageContext.request.contextPath}/test/testRequestMapping2?username=kris">测试RequestMapping2</a><br/>
-<a href="${pageContext.request.contextPath}/param.jsp">请求参数绑定测试</a>
+<a href="${pageContext.request.contextPath}/param.jsp">请求参数绑定测试</a><br/>
+<a href="${pageContext.request.contextPath}/servlet/testServlet">测试原生ServletAPI对象</a>
 </body>
 </html>

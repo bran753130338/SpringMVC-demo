@@ -35,6 +35,13 @@
             height: 450px;
             background-color: cadetblue;
         }
+        #param4 {
+            margin-top: 50px;
+            text-align: center;
+            width: 500px;
+            height: 200px;
+            background-color: aliceblue;
+        }
     </style>
 </head>
 <body style="text-align: center">
@@ -69,7 +76,18 @@
         <strong class="a">map用户姓名：</strong><input type="text" name="map['user'].uname"><br/><br/>
         <strong class="a">map用户年龄：</strong><input type="number" name="map['user'].age"><br/><br/>
         <button type="submit">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">重置</button>
-
+    </form>
+</div>
+<div id="param4">
+    <%--
+        自定义日期转换格式(yyyy-MM-dd)
+    --%>
+    <strong><h3>自定义类型转换器</h3></strong>
+    <form action="${pageContext.request.contextPath}/param/saveBook" method="post">
+        <strong class="a">图书名字：</strong><input type="text" name="name"><br/><br/>
+        <strong class="a">图书作者：</strong><input type="text" name="author"><br/><br/>
+        <strong class="a">出版日期：</strong><input type="text" name="date"><br/><br/>
+        <button type="submit">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">重置</button>
     </form>
 </div>
 </body>

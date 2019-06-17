@@ -1,6 +1,7 @@
 package com.bran.controller;
 
 import com.bran.domain.Account;
+import com.bran.domain.Book;
 import com.bran.domain.Manager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +38,13 @@ public class ParamController {
     @RequestMapping("/saveManager")
     public String saveManager(Manager manager){
         System.out.println(manager);
+        return "success";
+    }
+
+    //自定义日期转换格式(yyyy-MM-dd)
+    @RequestMapping("/saveBook")
+    public  String saveBook(Book book){
+        System.out.println(book);
         return "success";
     }
 }
