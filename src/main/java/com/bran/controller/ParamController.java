@@ -1,6 +1,7 @@
 package com.bran.controller;
 
 import com.bran.domain.Account;
+import com.bran.domain.Manager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -29,6 +30,13 @@ public class ParamController {
     @RequestMapping("/saveAccount")
     public String saveAccount(Account account){
         System.out.println(account);
+        return "success";
+    }
+
+    //请求参数绑定把数据封装到JavaBean的类中,包含集合数据
+    @RequestMapping("/saveManager")
+    public String saveManager(Manager manager){
+        System.out.println(manager);
         return "success";
     }
 }
