@@ -1,9 +1,8 @@
 package com.bran.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 @RequestMapping("/anno")
+@SessionAttributes(value={"message"}) //model的属性message会被存到session中
 public class AnnotationController {
     /**
      * 注解：@RequestParam
@@ -45,9 +45,52 @@ public class AnnotationController {
      * 属性：value：用于指定URL中占位符名称
      *      required：是否必须提供占位符。
      */
-    @RequestMapping("/testPathVaribale")
-    public String testPathVaribale(){
+    @RequestMapping("/testPathVariable/{sid}")
+    public String testPathVaribale(@PathVariable(name = "sid")String id){
+        System.out.println(id);
         return "success";
+    }
+    /**
+     * 注解：@RequestHeader
+     * 作用：用于获取请求消息头
+     * 属性：value：提供消息同名称
+     *      required：是否必须有此消息头
+     *
+     */
+    @RequestMapping("/testRequestHeader")
+    public  String testRequestHeader(@RequestHeader(value = "Accept") String header){
+        System.out.println(header);
+        return "success";
+    }
+
+    /**
+     * 注解：@CookieValue
+     * 作用：用于把指定的cookie名称的值传入控制器方法参数
+     * 属性：value：指定cookie的名称
+     *      required：是否必须有此cookie
+     */
+    @RequestMapping("/testCookieValue")
+    public String testCookieValue(@CookieValue(value = "JSESSIONID") String cookie){
+        System.out.println("JSESSIONID = "+cookie);
+        return "success";
+    }
+
+    /**
+     * 注解：@SessionAttributes
+     * 作用：用于多次执行控制器方法间的参数共享
+     * 属性：value：用于指定存入属性名称
+     *      type：用于指定存入数据类型
+     */
+    @RequestMapping("/testSessionAttributes")
+    public String testSessionAttributes(Model model){
+        model.addAttribute("message","大家好啊");
+        return "message";
+    }
+
+    @RequestMapping("/testSessionAttribute")
+    public String testSessionAttribute(@SessionAttribute("message") String message){
+        System.out.println(message);
+        return "message";
     }
 
 }

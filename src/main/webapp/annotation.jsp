@@ -2,26 +2,7 @@
 <html>
 <head>
     <title>常用的注解测试</title>
-    <style type="text/css">
-        .a{
-            text-align: right;
-            display: inline-block;
-            width: 100px;
-        }
-        #anno1{
-            text-align: center;
-            width: 500px;
-            height: 100px;
-            background-color: aqua;
-        }
-        #anno2{
-            margin-top: 50px;
-            text-align: center;
-            width: 500px;
-            height: 200px;
-            background-color: bisque;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/annotation.css">
 </head>
 <body>
 <div id="anno1">
@@ -35,6 +16,31 @@
         <strong class="a">年龄：</strong><input type="number" name="age"><br/><br/>
         <button type="submit">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">重置</button>
     </form>
+</div>
+<div id="anno3">
+    <strong><h3>@PathVariable测试</h3></strong>
+    <a href="${pageContext.request.contextPath}/anno/testPathVariable/100">PathVariable注解测试</a>
+</div>
+<div id="anno4">
+    <strong><h3>@RequestHeader测试</h3></strong>
+    <a href="${pageContext.request.contextPath}/anno/testRequestHeader">PathVariable注解测试</a>
+</div>
+<div id="anno5">
+    <strong><h3>@CookieValue测试</h3></strong>
+    <a href="${pageContext.request.contextPath}/anno/testCookieValue">CookieValue注解测试</a>
+</div>
+<div id="anno6">
+    <strong><h3>@ModelAttribute测试</h3></strong>
+    <form action="${pageContext.request.contextPath}/anno2/testModelAttribute" method="post">
+        <strong class="a">书名：</strong><input type="text" name="name"><br/><br/>
+        <strong class="a">作者：</strong><input type="text" name="author"><br/><br/>
+        <button type="submit">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">重置</button>
+    </form>
+</div>
+<div id="anno7">
+    <strong><h3>@SessionAttributes测试</h3></strong>
+    <a href="${pageContext.request.contextPath}/anno/testSessionAttributes">SessionAttributes注解存入session数据测试</a><br/>
+    <a href="${pageContext.request.contextPath}/anno/testSessionAttribute">SessionAttribute注解取出已存储的session数据测试</a>
 </div>
 </body>
 </html>

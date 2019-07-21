@@ -1,0 +1,36 @@
+.a {
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+}
+
+#anno1, #anno2, #anno3, #anno4, #anno5 ,#anno6,#anno7{
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    background-color: aqua;
+}
+
+#anno2{
+    height: 200px;
+    background-color: bisque;
+}
+
+#anno3{
+    background-color: chartreuse;
+}
+
+#anno4 {
+    background-color: brown;
+}
+
+#anno5 {
+    background-color: cyan;
+}
+#anno6{
+    height: 200px;
+    background-color: cornflowerblue;
+}
+#anno7 {
+    background-color: forestgreen;
+}
