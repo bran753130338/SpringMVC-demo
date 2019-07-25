@@ -1,8 +1,9 @@
 #
-#Sun Jul 21 15:44:52 CST 2019
+#Thu Jul 25 16:02:52 CST 2019
 com.bran.controller.HelloController=org.springframework.stereotype.Component
-com.bran.controller.Annotation2Controller=org.springframework.stereotype.Component
 com.bran.controller.AnnotationController=org.springframework.stereotype.Component
+com.bran.controller.Annotation2Controller=org.springframework.stereotype.Component
+com.bran.response.ResponseController=org.springframework.stereotype.Component
 com.bran.controller.ServletApiController=org.springframework.stereotype.Component
 com.bran.controller.ParamController=org.springframework.stereotype.Component
 com.bran.controller.RequestMappingController=org.springframework.stereotype.Component

@@ -1,0 +1,18 @@
+.a {
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+}
+
+#resp1,#resp2,#resp3{
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    background-color: aqua;
+}
+#resp2{
+    background-color: aliceblue;
+}
+#resp3{
+    background-color: beige;
+}
