@@ -66,4 +66,22 @@ public class ResponseController {
         modelAndView.setViewName("respresult");
         return modelAndView;
     }
+
+    /**
+     * 测试响应使用forward和redirect进行页面跳转
+     */
+    @RequestMapping("/testForward")
+    public String testForward(){
+        System.out.println("testForward方法执行了");
+        //请求的转发 forward:转发的页面
+        return "forward:/success.jsp";
+    }
+    @RequestMapping("/testRedirect")
+    public String testRedirect(){
+        System.out.println("testRedirect方法执行了");
+        //重定向
+        return "redirect:/index.jsp";
+    }
+
+
 }

@@ -22,7 +22,13 @@
     </bean>
     <!--开启SpringMvc框架注解支持-->
     <mvc:annotation-driven conversion-service="conversionService"/>
-    <!--开启之后才可以调用webapp下的静态资源(引入css，js等)，访问静态资源请求全部交
-        给Web服务器默认的Servlet处理-->
-    <mvc:default-servlet-handler />
+    <!--前端控制器DispatcherServlet会拦截到所有请求资源，导致静态资源（img、css、js）也会被拦截从而无法使用
+        解决问题需要配置静态资源不进行拦截
+    -->
+    <!--第一种方法，开启后告诉前端控制器哪些静态资源不进行拦截-->
+    <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/js/**" location="/js/" />
+
+    <!--第二种方法，开启之后，访问静态资源请求全部交给Web服务器默认的Servlet处理-->
+    <!--<mvc:default-servlet-handler />-->
 </beans>
