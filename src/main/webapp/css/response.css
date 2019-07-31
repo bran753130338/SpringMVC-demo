@@ -4,7 +4,7 @@
     width: 100px;
 }
 
-#resp1,#resp2,#resp3,#resp4,#json1{
+#resp1,#resp2,#resp3,#resp4,#json1,#xml1{
     text-align: center;
     width: 500px;
     height: 100px;
@@ -18,4 +18,7 @@
 }
 #resp4{
     background-color: blueviolet;
+}
+#xml1{
+    background-color: chartreuse;
 }

@@ -1,7 +1,7 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Spring Mvc</title>
+    <title>Spring MVC</title>
 </head>
 <body>
 <h2>Hello World!</h2>
@@ -12,6 +12,7 @@
 <a href="${pageContext.request.contextPath}/servlet/testServlet">测试原生ServletAPI对象</a><br/>
 <a href="annotation.jsp">常用注解练习</a><br/>
 <a href="response.jsp">响应数据和结果视图</a><br/>
-<a href="jsonresponse.jsp">响应返回JSON格式数据</a>
+<a href="jsonresponse.jsp">响应返回JSON格式数据</a><br/>
+<a href="fileupload.jsp">上传文件</a>
 </body>
 </html>
